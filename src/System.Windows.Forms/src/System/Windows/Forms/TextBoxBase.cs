@@ -85,6 +85,8 @@ namespace System.Windows.Forms {
         private int requestedHeight;
         bool integralHeightAdjust = false;
 
+        private string _placeholderText;
+
         //these indices are used to cache the values of the selection, by doing this
         //if the handle isn't created yet, we don't force a creation.
         private int selectionStart = 0;
@@ -888,6 +890,19 @@ namespace System.Windows.Forms {
         {
             get {
                 return false;
+            }
+        }
+
+        public string PlaceholderText
+        {
+            get
+            {
+                return _placeholderText;
+            }
+
+            set
+            {
+                _placeholderText = value;
             }
         }
 
